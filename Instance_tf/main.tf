@@ -6,6 +6,7 @@ resource "aws_instance" "Demo" {
   instance_type = "t2.nano"
   key_name = "virtusasystemprivatekey"
   subnet_id = "subnet-016d997f5abe4cb51"
+  iam_instance_profile = "arn:aws:iam::787952688011:instance-profile/ecsInstanceRole"
   vpc_security_group_ids = ["sg-07c693a8038c2723c"]
   tags = {
     Name = "terraformtest"
